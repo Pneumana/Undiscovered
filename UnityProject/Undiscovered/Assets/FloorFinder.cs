@@ -9,7 +9,17 @@ public class FloorFinder : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Floor")
         {
+            Debug.Log("Stepped on floor");
             PlatformController.Player.LandOnGround();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "Floor")
+        {
+            Debug.Log("Stepped on floor");
+            PlatformController.Player.NotGrounded();
         }
     }
 }

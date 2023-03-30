@@ -48,14 +48,11 @@ public class PlatformController : MonoBehaviour
     }
     void NormalControls()
     {
-        if (isGrounded)
-        {
-            x = 0;
-        }
-        if (!isGrounded)
+        x = 0;
+        /*if (!isGrounded)
         {
             x = body.velocity.x;
-        }
+        }*/
         y = body.velocity.y;
         if (Input.GetKey(KeyCode.A))
         {
@@ -139,5 +136,9 @@ public class PlatformController : MonoBehaviour
         isGrounded = true;
         body.gravityScale = 2;
             }
+    }
+    public void NotGrounded()
+    {
+        isGrounded = false;
     }
 }

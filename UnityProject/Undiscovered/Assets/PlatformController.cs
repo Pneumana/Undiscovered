@@ -48,7 +48,14 @@ public class PlatformController : MonoBehaviour
     }
     void NormalControls()
     {
-        x = 0;
+        if (isGrounded)
+        {
+            x = 0;
+        }
+        if (!isGrounded)
+        {
+            x = body.velocity.x;
+        }
         y = body.velocity.y;
         if (Input.GetKey(KeyCode.A))
         {
@@ -117,6 +124,7 @@ public class PlatformController : MonoBehaviour
         if (transform.position == Grappler.transform.position)
         {
             //this should fling the player
+            body.velocity = new Vector3(1, body.velocity.y);
             isGrappling = false;
             body.rotation = 0;
             GetComponent<BoxCollider2D>().isTrigger = false;

@@ -21,6 +21,7 @@ public class TorchLantern : MonoBehaviour
         {
             Debug.Log("light torch");
             collision.gameObject.GetComponent<Light2D>().enabled = true;
+            GameObject.Find("FireDoor").GetComponent<FireDoor>().UpdateTorches();
         }
         if(collision.gameObject.tag == "PutOutFire")
         {

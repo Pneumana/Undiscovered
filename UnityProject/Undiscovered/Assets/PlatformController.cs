@@ -76,7 +76,12 @@ public class PlatformController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             FindGrapplePoints();
-            GrappleStartBehavior();
+            if(lastGrapplePoint != null)
+                GrappleStartBehavior();
+            else
+            {
+
+            }
         }
     }
     void FindGrapplePoints()
@@ -110,7 +115,7 @@ public class PlatformController : MonoBehaviour
     {
         var max = Mathf.Min(Mathf.Atan2(transform.position.y - Grappler.transform.position.y, transform.position.x - Grappler.transform.position.x) * Mathf.Rad2Deg, Mathf.Atan2(Grappler.transform.position.y - transform.position.y, Grappler.transform.position.x - transform.position.x) * Mathf.Rad2Deg);
         body.rotation = (max) + Mathf.PI;
-        GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<Collider2D>().isTrigger = true;
         body.gravityScale = 0;
         isGrappling = true;
     }
@@ -124,7 +129,7 @@ public class PlatformController : MonoBehaviour
             body.velocity = new Vector3(1, body.velocity.y);
             isGrappling = false;
             body.rotation = 0;
-            GetComponent<BoxCollider2D>().isTrigger = false;
+            GetComponent<Collider2D>().isTrigger = false;
             body.gravityScale = 2;
         }
             

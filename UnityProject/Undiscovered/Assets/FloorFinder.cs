@@ -6,7 +6,7 @@ public class FloorFinder : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Floor")
         {
             Debug.Log("Stepped on floor");
@@ -15,10 +15,10 @@ public class FloorFinder : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Floor")
         {
-            Debug.Log("Stepped on floor");
+            Debug.Log("Stepped off floor");
             PlatformController.Player.NotGrounded();
         }
     }

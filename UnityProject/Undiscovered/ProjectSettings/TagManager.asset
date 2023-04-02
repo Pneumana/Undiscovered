@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Floor
   - GrapplePoint
+  - Moveable
+  - Flammable
+  - PutOutFire
   layers:
   - Default
   - TransparentFX

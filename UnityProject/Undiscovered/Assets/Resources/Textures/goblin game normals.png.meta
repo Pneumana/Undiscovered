@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a9be6cb51173d5d45b3d32d01da646ba
+guid: 433049260203d2745b561bb183a12b65
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,337 +105,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: temple tiles_0
+      name: goblin game normals_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e164b8e5d0492e458dfbe4f6b6507fd
-      internalID: 1098117467
+      spriteID: 499c28608cd3e3b45a8b541e57b99061
+      internalID: 60913872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_1
+      name: goblin game normals_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 128
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b082e6083f87fb64f8d16566a72b9b7b
-      internalID: 263770013
+      spriteID: e270b7ac72e486a4e8e5a9451ed6fccd
+      internalID: -754848906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_2
+      name: goblin game normals_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 256
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61dcc388cc1ff6844a62649cedde5b0f
-      internalID: -1816207512
+      spriteID: 63824f1afbfaa86468abab5a5e6006ba
+      internalID: -430841110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_3
+      name: goblin game normals_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
+        x: 384
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b78ef4e546b6894aa31d313706ec484
-      internalID: 932290460
+      spriteID: 517d2cf1470d57d45a58f9e11b2cfd30
+      internalID: -27695867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39b0ecd29d9cf614ca319b568331b5a0
-      internalID: -2109290614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: temple tiles_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9cd461fa7c3caa40b67ac606eead340
-      internalID: -1950588752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: temple tiles_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f247ee2944edd74459d32cf3c5c73668
-      internalID: 232758218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: temple tiles_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08b04a996d07d814c82f051b1440fa70
-      internalID: 70372843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: temple tiles_8
+      name: goblin game normals_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e4fe1f778d2112428329143739b741d
-      internalID: 164475804
+      spriteID: 8626acb1fea0cfe45a506f309095a286
+      internalID: 1134426831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_9
+      name: goblin game normals_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 128
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4cb95bd5a80a604a8537737bb62fba0
-      internalID: 1180161314
+      spriteID: 6a326121f990c0447883e9b26990f719
+      internalID: -791575964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_10
+      name: goblin game normals_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 256
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 349ae778ed91444459389c4605096339
-      internalID: -1645136288
+      spriteID: 73c8835b165b61d4a828df216e22dc24
+      internalID: -1254625938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_11
+      name: goblin game normals_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
+        x: 384
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab8e383dfc20e2d459f19a9c499c5c42
-      internalID: -841754488
+      spriteID: 428f1c49a7c6706459b2038ed749c27d
+      internalID: -1945958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_12
+      name: goblin game normals_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269ae06574431c346a7484cbcabc3e74
+      internalID: 528167327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin game normals_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b29d640323080d4989f5e02543ae28c
+      internalID: 1258034403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin game normals_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694a7c5fe9399e7449068e9a05d4f645
+      internalID: 89440724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin game normals_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b328acc921b3d4743b689dc3b91127fd
+      internalID: 233534697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin game normals_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 466624124bfcdfa45a9f7a7a33640b7f
-      internalID: -1609218190
+      spriteID: 5b01e0b930bf07f439e0c9a000c6ecc5
+      internalID: -613006779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_13
+      name: goblin game normals_13
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723e6cee5263cd34480b7c64260f99b1
-      internalID: -1787396040
+      spriteID: 28957bf2324cf9b4f8d4436b7cbb06b4
+      internalID: 1174312613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_14
+      name: goblin game normals_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4610f087d4d11e34fa058ed9d7c609e7
-      internalID: -873260321
+      spriteID: a95ca0a0b0d83a24a946c14c929b31db
+      internalID: -583024838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temple tiles_15
+      name: goblin game normals_15
       rect:
         serializedVersion: 2
-        x: 96
+        x: 384
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35951eb93adfc58468052f44b747575d
-      internalID: 579530977
+      spriteID: 326ae8760c2bfa34493c717aac2aecc7
+      internalID: 2078334921
       vertices: []
       indices: 
       edges: []
@@ -449,26 +449,24 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 433049260203d2745b561bb183a12b65, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     nameFileIdTable:
-      temple tiles_12: -1609218190
-      temple tiles_4: -2109290614
-      temple tiles_11: -841754488
-      temple tiles_14: -873260321
-      temple tiles_7: 70372843
-      temple tiles_9: 1180161314
-      temple tiles_6: 232758218
-      temple tiles_13: -1787396040
-      temple tiles_0: 1098117467
-      temple tiles_8: 164475804
-      temple tiles_5: -1950588752
-      temple tiles_2: -1816207512
-      temple tiles_3: 932290460
-      temple tiles_15: 579530977
-      temple tiles_10: -1645136288
-      temple tiles_1: 263770013
+      goblin game normals_12: -613006779
+      goblin game normals_9: 1258034403
+      goblin game normals_14: -583024838
+      goblin game normals_15: 2078334921
+      goblin game normals_10: 89440724
+      goblin game normals_8: 528167327
+      goblin game normals_1: -754848906
+      goblin game normals_6: -1254625938
+      goblin game normals_7: -1945958
+      goblin game normals_4: 1134426831
+      goblin game normals_5: -791575964
+      goblin game normals_13: 1174312613
+      goblin game normals_3: -27695867
+      goblin game normals_0: 60913872
+      goblin game normals_11: 233534697
+      goblin game normals_2: -430841110
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

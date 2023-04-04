@@ -24,43 +24,26 @@ public class BoatController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        body.velocity = Vector2.up;
+        float x = 0;
+        float y = 4;
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            if(speed < maxSpeed)
-            {
-                speed+= Time.deltaTime  * acceleration;
-            }
+            y = 6.5f;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            if (speed > maxReverseSpeed)
-            {
-                speed -= Time.deltaTime * acceleration;
-            }
+            y = 1.5f;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            body.rotation += Time.deltaTime * TurnSpeed;
+            x= -2f;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            body.rotation -= Time.deltaTime * TurnSpeed;
+            x = 2f;
         }
-        if (!Input.GetKey(KeyCode.UpArrow))
-        {
-            if (speed > 0)
-            {
-                speed -= Time.deltaTime * decayspeed;
-            }
-        }
-        if (!Input.GetKey(KeyCode.DownArrow))
-        {
-            if (speed < 0)
-            {
-                speed += Time.deltaTime * decayspeed;
-            }
-        }
-        body.velocity = transform.up * speed;
+        
+        body.velocity = new Vector2(x,y) * speed;
     }
 }

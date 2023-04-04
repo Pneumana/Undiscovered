@@ -40,7 +40,7 @@ public class FireDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(litTorches == 4)
+       if(litTorches == torches.Length)
         {
             Open();
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 using static UnityEngine.Rendering.DebugUI.Table;
+using UnityEngine.Rendering.Universal;
 
 public class ShootLaser : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class ShootLaser : MonoBehaviour
     public bool powered;
     public int coyoteFrames;
     // Start is called before the first frame update
+    private void Start()
+    {
+        //linerenderer.widthMultiplier = 0.2f;
+    }
     void Update()
     {
         //this is horribly inefficient but this is a sprint, not a polish contest
@@ -26,7 +31,7 @@ public class ShootLaser : MonoBehaviour
         }
         else
         {
-            if (powered && coyoteFrames > 0)
+            if (coyoteFrames > 0)
             {
                 linerenderer.widthMultiplier = 0.1f;
                 laserLocals.Clear();
@@ -41,7 +46,8 @@ public class ShootLaser : MonoBehaviour
         }
         if(coyoteFrames > 0)
         {
-            coyoteFrames--;
+            coyoteFrames-= 1;
+            Debug.Log("lower");
         }
     }
     void UpdateLaser()
@@ -59,7 +65,7 @@ public class ShootLaser : MonoBehaviour
         //laserLocals.Clear();
         laserLocals.Add(pos);
         Ray2D ray = new Ray2D(pos, -transform.up);
-        Vector2 belowReflection = new Vector2(pos.x + (0.6f * rot.x), pos.y);
+        Vector2 belowReflection = new Vector2(pos.x + (0.6f * rot.x), pos.y + (0.6f * rot.y));
         RaycastHit2D hit = Physics2D.Raycast(belowReflection, -transform.up);
 
         if (hit)
@@ -67,18 +73,25 @@ public class ShootLaser : MonoBehaviour
             laserLocals.Add(hit.point);
             //linerenderer.transform.position = transform.position;
             particlesystem.transform.position = hit.point;
+            Debug.DrawLine(transform.position,hit.point);
             UpdateLaser();
-            if(hit.collider.gameObject.name == "Mirror")
+            if(hit.collider.gameObject.tag == "Mirror")
             {
                 //reflect laser
-                Debug.Log("laser hits mirror");
-                hit.collider.gameObject.GetComponent<ShootLaser>().powered = true;
+                //Debug.Log("laser hits " + hit.collider.gameObject.name);
+                //hit.collider.gameObject.GetComponent<ShootLaser>().powered = true;
                 hit.collider.gameObject.GetComponent<ShootLaser>().coyoteFrames = 10;
+            }
+            if(hit.collider.gameObject.name == "LaserEndpoint")
+            {
+                hit.collider.gameObject.GetComponent<Light2D>().enabled = true;
+                GameObject.Find("LaserDoor").GetComponent<FireDoor>().UpdateTorches();
             }
         }
         else
         {
             laserLocals.Add(ray.GetPoint(30));
+            particlesystem.transform.position = ray.GetPoint(30);
             UpdateLaser();
         }
     }

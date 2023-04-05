@@ -9,6 +9,7 @@ TagManager:
   - Moveable
   - Flammable
   - PutOutFire
+  - Mirror
   layers:
   - Default
   - TransparentFX

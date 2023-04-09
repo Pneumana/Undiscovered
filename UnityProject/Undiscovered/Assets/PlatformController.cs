@@ -134,6 +134,11 @@ public class PlatformController : MonoBehaviour
         }
             
     }
+    public void TouchedGolem()
+    {
+        //kills the player by disabling input, jumping them upwards and playing a death animation. like in mario.
+        //respawns at the start of chase sequence
+    }
     public void LandOnGround()
     {
         if (!isGrappling) { 

@@ -66,7 +66,7 @@ public class PlatformController : MonoBehaviour
         {
             Debug.Log("Jumps");
             body.velocity = new Vector3(body.velocity.x, jumpPower);
-            isGrounded = false;
+            //isGrounded = false;
         }
 
         if (!Input.GetKey(KeyCode.Space) && !isGrounded)

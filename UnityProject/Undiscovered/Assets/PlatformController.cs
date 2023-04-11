@@ -4,6 +4,7 @@ using System.Drawing;
 using UnityEditor.Il2Cpp;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlatformController : MonoBehaviour
 {
@@ -83,6 +84,11 @@ public class PlatformController : MonoBehaviour
 
             }
         }
+        //cheats
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            //this cheat activates the next scene as if the player just escaped.
+        }
     }
     void FindGrapplePoints()
     {
@@ -110,6 +116,10 @@ public class PlatformController : MonoBehaviour
             lastGrapplePoint = closest.gameObject;
             lastGrappleCD = 0.5f;
         }
+        if (closest == null)
+        {
+            lastGrapplePoint = null ;
+        }
     }
     void GrappleStartBehavior()
     {
@@ -136,9 +146,11 @@ public class PlatformController : MonoBehaviour
     }
     public void TouchedGolem()
     {
-        //kills the player by disabling input, jumping them upwards and playing a death animation. like in mario.
-        //respawns at the start of chase sequence
+        UpdateManager.instance.takenIdol = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        
     }
+   
     public void LandOnGround()
     {
         if (!isGrappling) { 
@@ -150,5 +162,13 @@ public class PlatformController : MonoBehaviour
     public void NotGrounded()
     {
         isGrounded = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "Golem")
+        {
+            TouchedGolem();
+        }
     }
 }

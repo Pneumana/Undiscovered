@@ -87,6 +87,11 @@ public class ShootLaser : MonoBehaviour
                 hit.collider.gameObject.GetComponent<Light2D>().enabled = true;
                 GameObject.Find("LaserDoor").GetComponent<FireDoor>().UpdateTorches();
             }
+            if (hit.collider.gameObject.name == "LaserEndpoint1")
+            {
+                hit.collider.gameObject.GetComponent<Light2D>().enabled = true;
+                GameObject.Find("LaserDoor1").GetComponent<FireDoor>().UpdateTorches();
+            }
         }
         else
         {
@@ -96,5 +101,14 @@ public class ShootLaser : MonoBehaviour
         }
     }
     // Update is called once per frame
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "Golem")
+        {
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.left * 2;
+            
+            gameObject.GetComponent<Collider2D>().isTrigger = true;
+        }
+    }
 }

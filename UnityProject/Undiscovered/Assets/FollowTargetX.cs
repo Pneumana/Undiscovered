@@ -15,6 +15,7 @@ public class FollowTargetX : MonoBehaviour
     void FixedUpdate()
     {
         var destination = new Vector3(target.transform.position.x, transform.position.y,transform.position.z);
-        transform.position = Vector3.Slerp(transform.position, destination, Time.deltaTime * 5);
+        var newpos = Vector3.Slerp(transform.position, destination, Time.deltaTime * 5);
+        transform.position = new Vector3(newpos.x, newpos.y, -16);
     }
 }

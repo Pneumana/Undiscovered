@@ -8,8 +8,10 @@ public class AwakeGolem : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            GameObject.Destroy(GameObject.Find("PreventEscape"));
             GameObject.Find("Golem").GetComponent<GolemAdvance>().isActive = true;
             GameObject.Destroy(gameObject);
+
         }
     }
 }

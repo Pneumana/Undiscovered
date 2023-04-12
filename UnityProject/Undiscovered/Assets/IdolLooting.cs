@@ -22,6 +22,7 @@ public class IdolLooting : MonoBehaviour
     //this function should be triggered via an AnimationEvent in the loot idol animation
     public void ActivateGolem()
     {
+        GameObject.Destroy(GameObject.Find("PreventEscape"));
         golem.isActive = true;
     }
 }

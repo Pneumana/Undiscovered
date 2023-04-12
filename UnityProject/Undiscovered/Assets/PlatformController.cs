@@ -21,6 +21,7 @@ public class PlatformController : MonoBehaviour
     Vector3 previousPosition;
     GameObject lastGrapplePoint;
     public float lastGrappleCD;
+    public LineRenderer rope;
 
     float y = 0;
     float x = 0;
@@ -33,6 +34,7 @@ public class PlatformController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         Player = GetComponent<PlatformController>();
+        rope.widthMultiplier = 1;
     }
 
     // Update is called once per frame
@@ -132,6 +134,8 @@ public class PlatformController : MonoBehaviour
     void Grapple()
     {
         var newPos = Vector3.MoveTowards(transform.position, Grappler.transform.position, Time.deltaTime * 20);
+        rope.SetPosition(0, newPos);
+        rope.SetPosition(1, Grappler.transform.position);
         transform.position = newPos;
         if (transform.position == Grappler.transform.position)
         {
@@ -141,6 +145,8 @@ public class PlatformController : MonoBehaviour
             body.rotation = 0;
             GetComponent<Collider2D>().isTrigger = false;
             body.gravityScale = 2;
+            rope.SetPosition(0, Vector3.zero);
+            rope.SetPosition(1, Vector3.zero);
         }
             
     }

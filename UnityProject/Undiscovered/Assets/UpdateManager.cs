@@ -54,7 +54,9 @@ public class UpdateManager : MonoBehaviour
         GameObject.Find("FireDoor").GetComponent<FireDoor>().UpdateTorches();
         GameObject.Find("Golem").GetComponent<GolemAdvance>().isActive = true;
         GameObject.Find("Player").transform.position = GameObject.Find("Idol").transform.position;
+        GameObject.Find("Grapple").transform.position = GameObject.Find("Player").transform.position;
         GameObject.Destroy(GameObject.Find("PreventEscape"));
+
         /*        GameObject.Find("LaserDoor").GetComponent<FireDoor>().lowerTime = 5;
                 GameObject.Find("LaserDoor1").GetComponent<FireDoor>().lowerTime = 5;
                 GameObject.Find("FireDoor").GetComponent<FireDoor>().lowerTime = 5;*/

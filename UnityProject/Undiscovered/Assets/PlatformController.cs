@@ -29,6 +29,8 @@ public class PlatformController : MonoBehaviour
     public bool isGrounded;
     public bool isGrappling;
 
+    public bool hasGrapple;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,10 +62,12 @@ public class PlatformController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             x = -1;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
             x = 1;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
@@ -76,7 +80,7 @@ public class PlatformController : MonoBehaviour
         {
             body.velocity = new Vector3(body.velocity.x, Mathf.Min(body.velocity.y, 0));
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && hasGrapple)
         {
             FindGrapplePoints();
             if(lastGrapplePoint != null)
@@ -85,6 +89,14 @@ public class PlatformController : MonoBehaviour
             {
 
             }
+        }
+        if(x != 0)
+        {
+            GetComponent<Animator>().SetBool("Walking", true);
+        }
+        if (x == 0)
+        {
+            GetComponent<Animator>().SetBool("Walking", false);
         }
         //cheats
         if (Input.GetKeyDown(KeyCode.F1))
@@ -163,11 +175,13 @@ public class PlatformController : MonoBehaviour
         Debug.Log("Landed");
         isGrounded = true;
         body.gravityScale = 2;
-            }
+            GetComponent<Animator>().SetBool("Grounded", true);
+        }
     }
     public void NotGrounded()
     {
         isGrounded = false;
+        GetComponent<Animator>().SetBool("Grounded", false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -175,6 +189,15 @@ public class PlatformController : MonoBehaviour
         if(collision.gameObject.name == "Golem")
         {
             TouchedGolem();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "Grapple")
+        {
+            hasGrapple = true;
+            Destroy(collision.gameObject);
         }
     }
 }

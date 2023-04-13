@@ -13,6 +13,7 @@ public class GoToScene : MonoBehaviour
     }
     public void GoToNewScene()
     {
+        UpdateManager.instance.takenIdol = false;
         SceneManager.LoadScene(destiniation, LoadSceneMode.Single);
     }
     // Update is called once per frame

@@ -56,7 +56,16 @@ public class BoatController : MonoBehaviour
         {
             body.velocity = new Vector2(0, 4f) * speed;
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UpdateManager.instance.takenIdol = false;
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
+        //cheats
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            SceneManager.LoadScene("Victory", LoadSceneMode.Single);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

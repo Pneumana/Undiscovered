@@ -98,11 +98,17 @@ public class PlatformController : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("Walking", false);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UpdateManager.instance.takenIdol = false;
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
         //cheats
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            //this cheat activates the next scene as if the player just escaped.
+            SceneManager.LoadScene("BoatIntro", LoadSceneMode.Single);
         }
+        
     }
     void FindGrapplePoints()
     {

@@ -33,7 +33,8 @@ public class UpdateManager : MonoBehaviour
     {
         Debug.Log("OnDisable");
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        restartChase();
+        if(takenIdol)
+            restartChase();
     }
     public void restartChase()
     {

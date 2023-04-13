@@ -20,6 +20,7 @@ public class GoToBoatEscape : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            UpdateManager.instance.takenIdol = false;
             SceneManager.LoadScene("BoatIntro", LoadSceneMode.Single);
         }
     }
